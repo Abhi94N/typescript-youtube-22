@@ -18,16 +18,17 @@ const heroPower: Array<number> = []
 heroPower.push(2)
 console.log(heroPower)
 
-type User = {
-    name: string
-    isActive: boolean
-}
+// type User = {
+//     name: string
+//     isActive: boolean
+// }
 
-//const allUsers: User[] = []
-const allUsers: Array<User> = []
-allUsers.push({name: "", isActive:true})
-console.log(allUsers)
+// //const allUsers: User[] = []
+// const allUsers: Array<User> = []
+// allUsers.push({name: "", isActive:true})
+// console.log(allUsers)
 
+// number of numbers
 const MLModels: number[][] = [
     [255, 255, 255],
     []

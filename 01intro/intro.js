@@ -1,3 +1,4 @@
-var myuser = { name: "hitesh", age: 10 };
-console.log("Hitesh");
+var user = { name: "Abhilash", age: 29 };
+console.log("Abhilash");
+console.log(user.name);
 //console.log(user.email);

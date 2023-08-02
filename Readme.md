@@ -9,6 +9,8 @@ If installation is needed, look for package.json files and run:
 
 ```bash
 npm install
+npm install -g typescript
+npm install -g ts-node
 ```
 
 ## Contributing
