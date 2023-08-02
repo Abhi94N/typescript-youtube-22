@@ -13,7 +13,8 @@
 
 // alterative way of writing code
 class User {
-    private _courseCount = 1
+    // protected is set private to any extensions
+    protected _courseCount = 1
     readonly city: string = "Dehli"
     constructor(
         public email: string,
@@ -56,3 +57,12 @@ console.log(abhi.AppleEmail)
 //abhi.city = 's'
 // cannot access private 
 //console.log(abhi.city)
+
+// class that extends User does not have access to private methods so you need to change to protected
+class SubUser extends User {
+    isFamily: boolean = true
+    changeCourseCount(){
+        // cannot 
+        this._courseCount = 4
+    }
+}

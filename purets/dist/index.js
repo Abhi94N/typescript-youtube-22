@@ -17,6 +17,7 @@ class User {
         this.email = email;
         this.name = name;
         this.userId = userId;
+        // protected is set private to any extensions
         this._courseCount = 1;
         this.city = "Dehli";
     }
@@ -48,3 +49,14 @@ console.log(abhi.AppleEmail);
 //abhi.city = 's'
 // cannot access private 
 //console.log(abhi.city)
+// class that extends User does not have access to private methods so you need to change to protected
+class SubUser extends User {
+    constructor() {
+        super(...arguments);
+        this.isFamily = true;
+    }
+    changeCourseCount() {
+        // cannot 
+        this._courseCount = 4;
+    }
+}
