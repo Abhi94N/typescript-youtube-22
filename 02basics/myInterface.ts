@@ -14,6 +14,7 @@ interface User {
 }
 //inheritence
 // can extend more than one interface
+//similar to type except uses extends instead &
 interface Admin extends User {
     role: "admin" | "ta" | "learner"
 }
