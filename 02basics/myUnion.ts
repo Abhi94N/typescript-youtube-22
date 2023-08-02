@@ -1,29 +1,29 @@
-let score: number | string = 33
-score = 44
-console.log(typeof score)
-score = "55"
-console.log(score)
-console.log(typeof score)
+// let score: number | string = 33
+// score = 44
+// console.log(typeof score)
+// score = "55"
+// console.log(score)
+// console.log(typeof score)
 
 
 
 
-type User = {
-    name: string;
-    id: number
-}
+// type User = {
+//     name: string;
+//     id: number
+// }
 
-type Admin = {
-    username: string;
-    id: number
-}
+// type Admin = {
+//     username: string;
+//     id: number
+// }
 
-let Abhi: User | Admin = {name: "abhi", id: 334}
-console.log(Abhi)
-console.log(typeof Abhi)
+// let Abhi: User | Admin = {name: "abhi", id: 334}
+// console.log(Abhi)
+// console.log(typeof Abhi)
 
-Abhi = {username: "hc", id: 334}
-console.log(typeof Abhi)
+// Abhi = {username: "hc", id: 334}
+// console.log(typeof Abhi)
 
 // multiple passing of db id
 // function getDbId(id: number | string){

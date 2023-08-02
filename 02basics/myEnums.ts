@@ -1,3 +1,4 @@
+// adding const reduces js code compiled
 const enum SeatChoice {
     // start value is aisle
     AISLE = "aisle",
@@ -9,7 +10,7 @@ const enum SeatChoice {
     FOURTH
 }
 
-const hcSeat = SeatChoice.AISLE
+// const hcSeat = SeatChoice.AISLE
 
 
-console.log(hcSeat)
+// console.log(hcSeat)

@@ -3,15 +3,17 @@ interface User {
     email: string,
     userId: number,
     googleId?: string
-    // startTrail: () => string
-    startTrail(): string
+    // startTrial: () => string
+    startTrial(): string
     getCoupon(couponname: string, value: number): number
 }
 
+// reopening of interface
 interface User {
     githubToken: string
 }
-
+//inheritence
+// can extend more than one interface
 interface Admin extends User {
     role: "admin" | "ta" | "learner"
 }
@@ -19,12 +21,20 @@ interface Admin extends User {
 const hitesh: Admin = { dbId: 22, email: "h@h.com", userId: 2211,
 role: "admin",
 githubToken: "github",
-startTrail: () => {
-    return "trail started"
+startTrial: () => {
+    return "trial started"
 },
 getCoupon: (name: "hitesh10", off: 10) => {
+    if (name == 'hitesh10') {
+        console.log(name)
+        return off
+    }
     return 10
+
 }
 }
 hitesh.email = "h@hc.com"
 // hitesh.dbId = 33
+
+console.log(hitesh.startTrial())
+console.log(hitesh.getCoupon("hitesh10", 20))
