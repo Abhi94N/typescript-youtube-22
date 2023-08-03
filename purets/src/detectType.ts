@@ -57,27 +57,28 @@ function logValue(x: Date | string) {
 type Fish = {swim: () => void};
 type Bird = {fly: () => void};
 
+// truthy
 function isFish(pet: Fish | Bird): pet is Fish{
     return (pet as Fish).swim !== undefined
 }
 
 function getFood(pet: Fish | Bird){
     if (isFish(pet)) {
-        pet
+        console.log(pet)
         return "fish food"
     } else {
         pet
         return "bird Food"
     }
 }
-const s: Fish = {
+
+const shark: Fish = {
     swim() {
         console.log("swim")
     }
 }
-console.log(isFish(s))
-console.log(getFood(s))
-
+console.log(isFish(shark))
+console.log(getFood(shark))
 
 
 interface Circle {
@@ -121,3 +122,25 @@ function getArea(shape: Shape){
             return _defaultforshape
     }
 }
+
+let circle: Circle = {
+    kind: "circle",
+    radius: 3
+}
+let square: Square = {
+    kind: "square",
+    side: 4
+}
+
+let rectangle: Rectangle = {
+    kind: "rectangle",
+    length: 4,
+    width: 5
+}
+console.log(getTrueShape(circle))
+console.log(getTrueShape(square))
+console.log(getTrueShape(rectangle))
+
+console.log(getArea(circle))
+console.log(getArea(square))
+console.log(getArea(rectangle))
